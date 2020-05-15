@@ -11,23 +11,21 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_marginTop="5dp"
-            >
+            android:layout_marginTop="5dp">
 
             <Button
                 android:id="@+id/opBtn_ac"
                 style="@style/buttonFn"
                 android:fontFamily="monospace"
-                android:text="@string/ac"
-                 />
+                android:text="@string/ac" />
 
             <Button
                 android:id="@+id/opBtn_signSwitcher"
@@ -49,8 +47,7 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_marginTop="5dp"
-            >
+            android:layout_marginTop="5dp">
 
             <Button
                 android:id="@+id/numBtn_7"
@@ -76,8 +73,7 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_marginTop="5dp"
-            >
+            android:layout_marginTop="5dp">
 
             <Button
                 android:id="@+id/numBtn_4"
@@ -102,8 +98,7 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_marginTop="5dp"
-            >
+            android:layout_marginTop="5dp">
 
             <Button
                 android:id="@+id/numBtn_1"
@@ -131,6 +126,7 @@
             android:layout_marginTop="5dp"
 
             >
+
             <Button
                 android:id="@+id/numBtn_0"
                 style="@style/buttonNumZero"
@@ -142,18 +138,15 @@
             <Button
                 android:id="@+id/numBtn_decimal"
                 style="@style/buttonNum"
-                android:text="@string/decimal"
                 android:layout_weight="0"
-                />
-
+                android:text="@string/decimal" />
 
 
             <Button
                 android:id="@+id/op_equals"
                 style="@style/buttonOP"
-                android:text="@string/eq"
                 android:layout_weight="0"
-                />
+                android:text="@string/eq" />
 
 
         </TableRow>
