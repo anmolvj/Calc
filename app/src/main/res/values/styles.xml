@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+<!--    BUTTON BASE-->
+    <style name="buttonBase">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+<!--    OP BUTTON-->
+    <style name="buttonOP" parent="buttonBase">
+        <item name="android:background">@drawable/op</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+<!--    NUM BUTTON-->
+    <style name="buttonNum" parent="buttonBase">
+        <item name="android:background">@drawable/num</item>
+    </style>
+
+<!--    FN BUTTON-->
+    <style name="buttonFn" parent="buttonBase">
+        <item name="android:background">@drawable/fn</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+<!--    ZERO BUTTON-->
+    <style name="buttonNumZero" parent="buttonBase">
+        <item name="android:background">@drawable/zero</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:paddingLeft">40dp</item>
+    </style>
+</resources>
