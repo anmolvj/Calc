@@ -45,4 +45,9 @@
         <item name="android:gravity">left|center_vertical</item>
         <item name="android:paddingLeft">40dp</item>
     </style>
+
+<!--    MULTIPLY OP BUTTON-->
+    <style name="buttonOPMul" parent="buttonOP">
+        <item name="android:textSize">22sp</item>
+    </style>
 </resources>
