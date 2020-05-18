@@ -50,4 +50,13 @@
     <style name="buttonOPMul" parent="buttonOP">
         <item name="android:textSize">22sp</item>
     </style>
+
+<!--    RESULT TEXT-->
+    <style name="resultText">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:gravity">bottom|right</item>
+        <item name="android:textSize">100sp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
 </resources>

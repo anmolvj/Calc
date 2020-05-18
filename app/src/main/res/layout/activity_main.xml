@@ -8,156 +8,163 @@
     android:background="@color/Black">
 
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/resultView"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="157dp"
+            android:text="0"
+            style="@style/resultText"
+             />
 
-            <Button
-                android:id="@+id/opBtn_ac"
-                style="@style/buttonFn"
-                android:fontFamily="monospace"
-                android:text="@string/ac" />
+        <TableLayout
+            android:id="@+id/calc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
 
-            <Button
-                android:id="@+id/opBtn_signSwitcher"
-                style="@style/buttonFn"
-                android:text="@string/signSwitch" />
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp">
 
-            <Button
-                android:id="@+id/opBtn_percentage"
-                style="@style/buttonFn"
-                android:text="@string/perc" />
+                <Button
+                    android:id="@+id/opBtn_ac"
+                    style="@style/buttonFn"
+                    android:fontFamily="monospace"
+                    android:text="@string/ac" />
 
-            <Button
-                android:id="@+id/op_divide"
-                style="@style/buttonOP"
-                android:text="@string/div"
+                <Button
+                    android:id="@+id/opBtn_signSwitcher"
+                    style="@style/buttonFn"
+                    android:text="@string/signSwitch" />
 
-                />
-        </TableRow>
+                <Button
+                    android:id="@+id/opBtn_percentage"
+                    style="@style/buttonFn"
+                    android:text="@string/perc" />
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_marginTop="5dp">
+                <Button
+                    android:id="@+id/op_divide"
+                    style="@style/buttonOP"
+                    android:text="@string/div"
 
-            <Button
-                android:id="@+id/numBtn_7"
-                style="@style/buttonNum"
-                android:text="@string/seven" />
+                    />
+            </TableRow>
 
-            <Button
-                android:id="@+id/numBtn_8"
-                style="@style/buttonNum"
-                android:text="@string/eight" />
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp">
 
-            <Button
-                android:id="@+id/numBtn_9"
-                style="@style/buttonNum"
-                android:text="@string/nine" />
+                <Button
+                    android:id="@+id/numBtn_7"
+                    style="@style/buttonNum"
+                    android:text="@string/seven" />
 
-            <Button
-                android:id="@+id/op_multiply"
-                style="@style/buttonOPMul"
+                <Button
+                    android:id="@+id/numBtn_8"
+                    style="@style/buttonNum"
+                    android:text="@string/eight" />
 
-                android:text="@string/mul" />
-        </TableRow>
+                <Button
+                    android:id="@+id/numBtn_9"
+                    style="@style/buttonNum"
+                    android:text="@string/nine" />
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_marginTop="5dp">
+                <Button
+                    android:id="@+id/op_multiply"
+                    style="@style/buttonOPMul"
 
-            <Button
-                android:id="@+id/numBtn_4"
-                style="@style/buttonNum"
-                android:text="@string/four" />
+                    android:text="@string/mul" />
+            </TableRow>
 
-            <Button
-                android:id="@+id/numBtn_5"
-                style="@style/buttonNum"
-                android:text="@string/five" />
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp">
 
-            <Button
-                android:id="@+id/numBtn_6"
-                style="@style/buttonNum"
-                android:text="@string/six" />
+                <Button
+                    android:id="@+id/numBtn_4"
+                    style="@style/buttonNum"
+                    android:text="@string/four" />
 
-            <Button
-                android:id="@+id/op_subtract"
-                style="@style/buttonOP"
-                android:text="@string/sub" />
-        </TableRow>
+                <Button
+                    android:id="@+id/numBtn_5"
+                    style="@style/buttonNum"
+                    android:text="@string/five" />
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_marginTop="5dp">
+                <Button
+                    android:id="@+id/numBtn_6"
+                    style="@style/buttonNum"
+                    android:text="@string/six" />
 
-            <Button
-                android:id="@+id/numBtn_1"
-                style="@style/buttonNum"
-                android:text="@string/one" />
+                <Button
+                    android:id="@+id/op_subtract"
+                    style="@style/buttonOP"
+                    android:text="@string/sub" />
+            </TableRow>
 
-            <Button
-                android:id="@+id/numBtn_2"
-                style="@style/buttonNum"
-                android:text="@string/two" />
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp">
 
-            <Button
-                android:id="@+id/numBtn_3"
-                style="@style/buttonNum"
-                android:text="@string/three" />
+                <Button
+                    android:id="@+id/numBtn_1"
+                    style="@style/buttonNum"
+                    android:text="@string/one" />
 
-            <Button
-                android:id="@+id/op_add"
-                style="@style/buttonOP"
-                android:text="@string/add" />
-        </TableRow>
+                <Button
+                    android:id="@+id/numBtn_2"
+                    style="@style/buttonNum"
+                    android:text="@string/two" />
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_marginTop="5dp"
+                <Button
+                    android:id="@+id/numBtn_3"
+                    style="@style/buttonNum"
+                    android:text="@string/three" />
 
-            >
+                <Button
+                    android:id="@+id/op_add"
+                    style="@style/buttonOP"
+                    android:text="@string/add" />
+            </TableRow>
 
-            <Button
-                android:id="@+id/numBtn_0"
-                style="@style/buttonNumZero"
-                android:text="@string/zero"
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
 
-                />
+                >
 
+                <Button
+                    android:id="@+id/numBtn_0"
+                    style="@style/buttonNumZero"
+                    android:text="@string/zero"
 
-            <Button
-                android:id="@+id/numBtn_decimal"
-                style="@style/buttonNum"
-                android:layout_weight="0"
-                android:text="@string/decimal" />
-
-
-            <Button
-                android:id="@+id/op_equals"
-                style="@style/buttonOP"
-                android:layout_weight="0"
-                android:text="@string/eq" />
+                    />
 
 
-        </TableRow>
-
-    </TableLayout>
-
-
-
-
+                <Button
+                    android:id="@+id/numBtn_decimal"
+                    style="@style/buttonNum"
+                    android:layout_weight="0"
+                    android:text="@string/decimal" />
 
 
+                <Button
+                    android:id="@+id/op_equals"
+                    style="@style/buttonOP"
+                    android:layout_weight="0"
+                    android:text="@string/eq" />
+
+
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
