@@ -16,7 +16,7 @@
 
 
 <!--    Operations-->
-    <string name="div">+</string>
+    <string name="div">÷</string>
     <string name="mul">x</string>
     <string name="sub">-</string>
     <string name="add">+</string>

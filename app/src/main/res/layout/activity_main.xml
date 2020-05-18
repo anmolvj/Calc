@@ -11,7 +11,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/screen"
+        >
 
         <TextView
             android:id="@+id/resultView"
@@ -23,7 +25,7 @@
              />
 
         <TableLayout
-            android:id="@+id/calc"
+            android:id="@+id/numpad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -34,18 +36,18 @@
                 android:layout_marginTop="5dp">
 
                 <Button
-                    android:id="@+id/opBtn_ac"
+                    android:id="@+id/op_ac"
                     style="@style/buttonFn"
                     android:fontFamily="monospace"
                     android:text="@string/ac" />
 
                 <Button
-                    android:id="@+id/opBtn_signSwitcher"
+                    android:id="@+id/op_signSwitcher"
                     style="@style/buttonFn"
                     android:text="@string/signSwitch" />
 
                 <Button
-                    android:id="@+id/opBtn_percentage"
+                    android:id="@+id/op_percentage"
                     style="@style/buttonFn"
                     android:text="@string/perc" />
 
