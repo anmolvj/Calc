@@ -13,22 +13,24 @@ public class MainActivity extends AppCompatActivity {
     private String currentOp = null;
 
     private String performOperation(Double secondNumber) {
-        String result = "0";
-        switch(currentOp) {
+        Double result = 0.0;
+        switch (currentOp) {
             case "/":
-                result =  Double.toString(firstNumber/secondNumber);
+                result = firstNumber / secondNumber;
                 break;
             case "*":
-                result =   Double.toString(firstNumber*secondNumber);
+                result = firstNumber * secondNumber;
                 break;
             case "-":
-                result =   Double.toString(firstNumber-secondNumber);
+                result = firstNumber - secondNumber;
                 break;
             case "+":
-                result =   Double.toString(firstNumber+secondNumber);
+                result = firstNumber + secondNumber;
                 break;
+            case "%":
+                result = firstNumber % secondNumber;
         }
-        return result;
+        return Double.toString(result);
     }
 
     @Override
@@ -37,13 +39,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-
-//        OUTPUT TEXT VIEW
+        //        OUTPUT TEXT VIEW
         final TextView resultScreen = findViewById(R.id.resultView);
 
 
-//        NUMBER BUTTONS
+        //        NUMBER BUTTONS
         final Button n0 = findViewById(R.id.numBtn_0);
         final Button n1 = findViewById(R.id.numBtn_1);
         final Button n2 = findViewById(R.id.numBtn_2);
@@ -56,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
         final Button n9 = findViewById(R.id.numBtn_9);
 
 
-//        OPERATION BUTTONS
+        //        OPERATION BUTTONS
         final Button opDiv = findViewById(R.id.op_divide);
         final Button opMul = findViewById(R.id.op_multiply);
         final Button opSub = findViewById(R.id.op_subtract);
         final Button opAdd = findViewById(R.id.op_add);
         final Button opEqls = findViewById(R.id.op_equals);
 
-//        FUNCTION BUTTONS
+        //        FUNCTION BUTTONS
         final Button fnAc = findViewById(R.id.op_ac);
         final Button fnSignSwitcher = findViewById(R.id.op_signSwitcher);
         final Button fnPer = findViewById(R.id.op_percentage);
@@ -74,40 +74,40 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final int id = v.getId();
 
-                switch(id){
+                switch (id) {
                     case R.id.numBtn_0:
-                        resultScreen.setText((resultScreen.getText().toString()+"0").replaceFirst ("^0*", ""));
+                        resultScreen.setText((resultScreen.getText().toString() + "0").replaceFirst("^0*", ""));
                         break;
                     case R.id.numBtn_1:
 
-                        resultScreen.setText((resultScreen.getText().toString()+"1").replaceFirst ("^0*", ""));
+                        resultScreen.setText((resultScreen.getText().toString() + "1").replaceFirst("^0*", ""));
                         break;
                     case R.id.numBtn_2:
-                        resultScreen.setText((resultScreen.getText().toString()+"2").replaceFirst ("^0*", ""));
+                        resultScreen.setText((resultScreen.getText().toString() + "2").replaceFirst("^0*", ""));
                         break;
                     case R.id.numBtn_3:
-                        resultScreen.setText((resultScreen.getText().toString()+"3").replaceFirst ("^0*", ""));
+                        resultScreen.setText((resultScreen.getText().toString() + "3").replaceFirst("^0*", ""));
                         break;
                     case R.id.numBtn_4:
-                        resultScreen.setText((resultScreen.getText().toString()+"4").replaceFirst ("^0*", ""));
+                        resultScreen.setText((resultScreen.getText().toString() + "4").replaceFirst("^0*", ""));
                         break;
                     case R.id.numBtn_5:
-                        resultScreen.setText((resultScreen.getText().toString()+"5").replaceFirst ("^0*", ""));
+                        resultScreen.setText((resultScreen.getText().toString() + "5").replaceFirst("^0*", ""));
                         break;
                     case R.id.numBtn_6:
-                        resultScreen.setText((resultScreen.getText().toString()+"6").replaceFirst ("^0*", ""));
+                        resultScreen.setText((resultScreen.getText().toString() + "6").replaceFirst("^0*", ""));
                         break;
                     case R.id.numBtn_7:
-                        resultScreen.setText((resultScreen.getText().toString()+"7").replaceFirst ("^0*", ""));
+                        resultScreen.setText((resultScreen.getText().toString() + "7").replaceFirst("^0*", ""));
                         break;
                     case R.id.numBtn_8:
-                        resultScreen.setText((resultScreen.getText().toString()+"8").replaceFirst ("^0*", ""));
+                        resultScreen.setText((resultScreen.getText().toString() + "8").replaceFirst("^0*", ""));
                         break;
                     case R.id.numBtn_9:
-                        resultScreen.setText((resultScreen.getText().toString()+"9").replaceFirst ("^0*", ""));
+                        resultScreen.setText((resultScreen.getText().toString() + "9").replaceFirst("^0*", ""));
                         break;
                     case R.id.op_divide:
-                        if(currentOp != null) {
+                        if (currentOp != null) {
                             String res = performOperation(Double.parseDouble(resultScreen.getText().toString()));
                             firstNumber = Double.parseDouble(res);
                             resultScreen.setText("0");
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                         currentOp = "/";
                         break;
                     case R.id.op_multiply:
-                        if(currentOp != null) {
+                        if (currentOp != null) {
                             String res = performOperation(Double.parseDouble(resultScreen.getText().toString()));
                             firstNumber = Double.parseDouble(res);
                             resultScreen.setText("0");
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
                         currentOp = "*";
                         break;
                     case R.id.op_subtract:
-                        if(currentOp != null) {
+                        if (currentOp != null) {
                             String res = performOperation(Double.parseDouble(resultScreen.getText().toString()));
                             firstNumber = Double.parseDouble(res);
                             resultScreen.setText("0");
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                         currentOp = "-";
                         break;
                     case R.id.op_add:
-                        if(currentOp != null) {
+                        if (currentOp != null) {
                             String res = performOperation(Double.parseDouble(resultScreen.getText().toString()));
                             firstNumber = Double.parseDouble(res);
                             resultScreen.setText("0");
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                         currentOp = "+";
                         break;
                     case R.id.op_equals:
-                        if(currentOp != null) {
+                        if (currentOp != null) {
                             String res = performOperation(Double.parseDouble(resultScreen.getText().toString()));
                             firstNumber = 0;
                             resultScreen.setText(res);
@@ -164,10 +164,19 @@ public class MainActivity extends AppCompatActivity {
                         resultScreen.setText("0");
                         break;
                     case R.id.op_signSwitcher:
-
+                        int cur = Integer.parseInt(resultScreen.getText().toString());
+                        resultScreen.setText(Integer.toString(cur * -1));
                         break;
                     case R.id.op_percentage:
-
+                        if (currentOp != null) {
+                            String res = performOperation(Double.parseDouble(resultScreen.getText().toString()));
+                            firstNumber = Double.parseDouble(res);
+                            resultScreen.setText("0");
+                        } else {
+                            firstNumber = Double.parseDouble(resultScreen.getText().toString());
+                            resultScreen.setText("0");
+                        }
+                        currentOp = "%";
                         break;
                 }
             }
